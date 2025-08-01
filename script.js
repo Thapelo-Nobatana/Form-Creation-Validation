@@ -42,13 +42,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         // Display feedback
-        feedbackDiv.style.display = 'block';
+        feedbackDiv.style.display = "block";
         if(!isValid){
-            feedbackDiv.innerHTML = `<ul>${messages.map(msg => `<li>${msg}</li>`).join('<br>')}</ul>`;
-            feedbackDiv.style.color = '#dc3545'; // red color for errors
+            feedbackDiv.textContent = messages.join('<br>');
+            feedbackDiv.style.color = "#dc3545"; // red color for errors
         } else {
-            feedbackDiv.textContent = `Registration successful! Welcome, ${username}.`;
-            feedbackDiv.style.color = '#28a745'; // green color for success
+            feedbackDiv.textContent = "Registration successful!";
+            feedbackDiv.style.color = "#28a745"; // green color for success
             form.submit()
         }
     })
