@@ -1,8 +1,8 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('registration-form');
     const feedbackDiv = document.getElementById('fom-feedback');
 
-    form.addEventListener('submit', (even) => {
+    form.addEventListener('submit', function(even) {
         even.preventDefault();
 
         // input validation
